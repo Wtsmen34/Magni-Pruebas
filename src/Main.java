@@ -2,9 +2,7 @@ import javax.swing.JOptionPane;
 public class Main {
     public static void main(String[] args) {
         int numeroEjercicio;
-        do {
-
-            String input = JOptionPane.showInputDialog("""
+        string actvText = """
              Eliga la actividad que desea visualizar: 
               1.Ejercicio 1  9.Ejercicio 9
               2.Ejercicio 2  10.Ejercicio 10
@@ -13,7 +11,10 @@ public class Main {
               5.Ejercicio 5  13.Ejercicio 13
               6.Ejercicio 6  14.Ejercicio 14
               7.Ejercicio 7  15.Salir
-              8.Ejercicio 8 """);
+              8.Ejercicio 8 """;
+        do {
+
+            String input = JOptionPane.showInputDialog(actvText);
             try {
                 numeroEjercicio = Integer.parseInt(input);
             } catch (NumberFormatException e) {
